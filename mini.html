@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing</title>
+    <style>
+        body{
+            background-color: bisque;
+            text-align: center;
+        }
+
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #element{
+            padding: 10px 10px;
+            border: none;
+            outline: none;
+            box-shadow: 3px 3px 13px 3px black;
+        }
+        button{
+            margin: 20px;
+            font-size: 20px;
+            width: 200px;
+            font-size: 22px;
+            background-color: aquamarine;
+            color: black;
+            border: none;
+            outline:none;
+            box-shadow: 3px 2px 12px black;
+        }
+        #result{
+            margin-top: 10px;
+            font-family: cursive;
+
+        }
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    
+    <h1>Guess the number Between 1 to 10</h1>
+    <h3>Numbers are Jumbled</h3>
+    <p id="correct">The Correct number is 9</p>
+
+
+<input type="text" id="element"> <br>
+<button onclick="getElement()"> Click Here to get Element  </button>
+
+<p id="result"></p>
+<p id="result2"></p>
+
+
+</div>
+
+    <script>
+       
+let a = [1,3,2,5,4,7,6,8,9,0]
+
+
+function getElement(){
+    let abc = document.getElementById("element").value
+     //let xzy = document.getElementById("element").value
+    if(abc < a.length){
+        document.getElementById("result").innerHTML = a[abc];
+        if (a[abc] == 9){
+         document.getElementById("correct").animate  = "";
+         document.getElementById("correct").style.color = "green";
+         document.getElementById("correct").style.fontSize = "x-large"
+         alert("Congrats You got Answer");
+        }
+        else{
+        document.getElementById("result").innerHTML = "Wrong Input"
+    }
+        
+     
+    } 
+}
+
+
+
+    </script>
+</body>
+</html>
